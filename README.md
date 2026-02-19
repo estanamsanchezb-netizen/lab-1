@@ -5,6 +5,23 @@ Analizar estadísticamente una señal fisiológia, calcular sus principales esta
 ### Parte A
 1. Se desacrgo una señal fisiológica de ecg mediante la pagina physioNet (https://physionet.org/content/norwegian-athlete-ecg/1.0.0/). Se uso la señal del Norwegian Endurance Athlete ECG Database.
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+!pip install wfdb
+import wfdb
+from scipy.stats import kurtosis
+from scipy.stats import gaussian_kde
+import pandas as pd
+from scipy.stats import skew
+```
+<br>
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+<br>
+```python
 signals,fields=wfdb.rdsamp('/content/ath_001')
 signals
 vaca=signals[:,1]
