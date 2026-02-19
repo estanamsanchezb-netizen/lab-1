@@ -87,6 +87,7 @@ plt.legend()
 plt.show()
 ```
 
+
 <img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
 
 ### Parte B 
