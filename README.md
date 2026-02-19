@@ -32,7 +32,44 @@ plt.show()
    -Coeficiente de variación: -60.62009878776379 %
    
    -Curtosis: 14.570386479062549
+```python
+suma=0
+for n in vaca:
+  suma= suma+n
+contador=0
+for c in vaca:
+  contador= contador+1
+media=suma/contador
+print(f"La media es:{media}")
 
+suma2 = 0
+contador2 = 0
+for num in vaca:
+    suma2= suma2+(num-media) ** 2
+for c in vaca:
+  contador2= contador2+1
+
+varianza =suma2 / (contador2)
+desviacion_p=(varianza)**(1/2)
+print(f"La Desviacion estandar de la población es: {desviacion_p}")
+
+suma3 = 0
+contador3 = 0
+for numer in vaca:
+    suma3= suma3+(numer-media) ** 2
+for c in vaca:
+  contador3= contador3+1
+
+varianza =suma3 / (contador3-1)
+desviacion_m= (varianza)**(1/2)
+print(f"La Desviacion estandar de la muestra es: {desviacion_m}")
+
+c_variacion=(desviacion_p/media)*100
+print(f"El coeficiente de variación es: {c_variacion} %")
+
+asimetria = np.mean(((vaca - media) / desviacion_p)**3)
+print(f"La asimetría es igual a {asimetria}")
+```
 5. Se grafico el histograma y la función de probabilidad 
 ### Parte B 
 ### Parte C 
