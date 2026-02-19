@@ -70,7 +70,25 @@ print(f"El coeficiente de variación es: {c_variacion} %")
 asimetria = np.mean(((vaca - media) / desviacion_p)**3)
 print(f"La asimetría es igual a {asimetria}")
 ```
-5. Se grafico el histograma y la función de probabilidad 
+4. Se grafico el histograma y la función de probabilidad
+   ```python
+   cuentas, bins, _=plt.hist(vaca, bins=50, color='pink', edgecolor='magenta', density=True)
+
+#funcion de probabilidad
+funcion_prob=0.5*(bins[1:]+ bins[:-1])
+plt.plot(funcion_prob, cuentas, color='purple', linewidth=1, label="Funcion de probabilidad")
+
+#histograma
+plt.title("Histograma de la señal ECG, descargada")
+plt.ylabel("Densidad de probabilidad (1/V)")
+plt.xlabel("Amplitud de la señal (V)")
+plt.grid()
+plt.legend()
+plt.show()
+```
+
+<img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
+
 ### Parte B 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
