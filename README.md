@@ -4,6 +4,7 @@ Analizar estadísticamente una señal fisiológia, calcular sus principales esta
 ## Procedimiento 
 ### Parte A
 1. Se desacrgo una señal fisiológica de ecg mediante la pagina physioNet (https://physionet.org/content/norwegian-athlete-ecg/1.0.0/). Se uso la señal del Norwegian Endurance Athlete ECG Database.
+```python
 signals,fields=wfdb.rdsamp('/content/ath_001')
 signals
 vaca=signals[:,1]
@@ -13,7 +14,7 @@ plt.ylabel("Voltaje (mV)")
 plt.title("Grafica A")
 plt.axis([0,2000,-1,1])
 plt.show()
-
+```
 <br>
 <img width="631" height="450" alt="image" src="https://github.com/user-attachments/assets/7ab0d389-58e0-4d40-9f68-d72217ba2cb5" />
 
