@@ -34,7 +34,7 @@ plt.show()
 ```
 <br>
 <img width="631" height="450" alt="image" src="https://github.com/user-attachments/assets/7ab0d389-58e0-4d40-9f68-d72217ba2cb5" />
-<br>
+
 Imagen 1. Diagrama de flujo parte A
 
 2. La señal fue graficada en el dominio del tiempo.
