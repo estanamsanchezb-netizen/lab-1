@@ -15,13 +15,13 @@ from scipy.stats import gaussian_kde
 import pandas as pd
 from scipy.stats import skew
 ```
-<br>
-```python
+
+
 from google.colab import drive
 drive.mount('/content/drive')
-```
-<br>
-```python
+
+
+
 signals,fields=wfdb.rdsamp('/content/ath_001')
 signals
 vaca=signals[:,1]
