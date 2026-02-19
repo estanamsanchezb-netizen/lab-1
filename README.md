@@ -22,13 +22,18 @@ plt.show()
 3. Cálculo de estadísticos descriptivos:
 
    -Media:  -0.19830211599999997
+   
    -Mediana:  -0.2217
+   
    -Desviación estándar de la población: 0.12021093861742593
+   
    -Desviación estándar de la muestra :0.12022296151475233
+   
    -Coeficiente de variación: -60.62009878776379 %
+   
    -Curtosis: 14.570386479062549
 
-4. Se grafico el histograma y la función de probabilidad 
+5. Se grafico el histograma y la función de probabilidad 
 ### Parte B 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
