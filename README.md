@@ -71,9 +71,8 @@ asimetria = np.mean(((vaca - media) / desviacion_p)**3)
 print(f"La asimetría es igual a {asimetria}")
 ```
 4. Se grafico el histograma y la función de probabilidad
-   ```python
-   cuentas, bins, _=plt.hist(vaca, bins=50, color='pink', edgecolor='magenta', density=True)
-
+ ```python
+cuentas, bins, _=plt.hist(vaca, bins=50, color='pink', edgecolor='magenta', density=True)
 #funcion de probabilidad
 funcion_prob=0.5*(bins[1:]+ bins[:-1])
 plt.plot(funcion_prob, cuentas, color='purple', linewidth=1, label="Funcion de probabilidad")
