@@ -27,7 +27,7 @@ plt.show()
 -Desviación estándar de la muestra :0.12022296151475233
 -Coeficiente de variación: -60.62009878776379 %
 -Curtosis: 14.570386479062549
-```
+
 4. Se grafico el histograma y la función de probabilidad 
 ### Parte B 
 ### Parte C 
