@@ -105,6 +105,10 @@ plt.show()
 
 
 <img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
+<br>
+
+
+<img width="157" height="894" alt="image" src="https://github.com/user-attachments/assets/2eee55fc-0fb8-4d5c-9268-b3c8f3367f45" />
 
 ### Parte B 
 ### Parte C 
