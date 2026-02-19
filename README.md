@@ -20,7 +20,7 @@ plt.show()
 
 2. La señal fue graficada en el dominio del tiempo.
 3. Cálculo de estadísticos descriptivos:
-   md
+ md
 -Media:  -0.19830211599999997
 -Mediana:  -0.2217
 -Desviación estándar de la población: 0.12021093861742593
