@@ -35,7 +35,6 @@ plt.show()
 <br>
 <img width="631" height="450" alt="image" src="https://github.com/user-attachments/assets/7ab0d389-58e0-4d40-9f68-d72217ba2cb5" />
 
-Imagen 1. Diagrama de flujo parte A
 
 2. La señal fue graficada en el dominio del tiempo.
 3. Cálculo de estadísticos descriptivos:
@@ -111,6 +110,7 @@ plt.show()
 
 
 <img width="157" height="894" alt="image" src="https://github.com/user-attachments/assets/2eee55fc-0fb8-4d5c-9268-b3c8f3367f45" />
+Imagen 1. Diagrama de flujo parte A
 
 ### Parte B 
 ### Parte C 
