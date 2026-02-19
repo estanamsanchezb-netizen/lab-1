@@ -110,6 +110,7 @@ plt.show()
 
 
 <img width="157" height="894" alt="image" src="https://github.com/user-attachments/assets/2eee55fc-0fb8-4d5c-9268-b3c8f3367f45" />
+<br>
 Imagen 1. Diagrama de flujo parte A
 
 ### Parte B 
