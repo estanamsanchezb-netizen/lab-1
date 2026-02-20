@@ -246,6 +246,10 @@ plt.show()
 ```
 <img width="895" height="375" alt="image" src="https://github.com/user-attachments/assets/25540732-a8dc-4e51-b664-2ee8dc309346" />
 
+
+Los resultados estadísticos muestran similitudes clave con el ejemplo guía: coeficiente de variación (60.62%) y asimetría (4.80) idénticos, confirmando dispersión y distribución similares. Sin embargo, nuestra señal presenta menor amplitud (media -0.198 V vs -1.44 V) y mayor estabilidad (desviación 0.120 V vs 0.629 V), con kurtosis superior (14.57 vs 10.47) que indica picos más pronunciados, típicos de ECG real. Estas diferencias responden a la configuración específica de captura
+
+
 ### Parte C 
 ¿Qué es la relación señal-ruido?
 
