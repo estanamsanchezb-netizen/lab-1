@@ -116,6 +116,55 @@ Imagen 1. Diagrama de flujo parte A
 ### Parte B 
 1. Se generó una señal ECG utilizando el generador de señales.
 2. Se realizó la captura mediante el uso del sistema DAQ. En Spyder se ejecutó el código de captura y se guardó el archivo en formato TXT.
+   ```
+   # Librerías necesarias:
+import nidaqmx                     # Librería DAQ
+from nidaqmx.constants import AcquisitionType # Para definir que adquiera datos de manera consecutiva
+import matplotlib.pyplot as plt    # Librería para graficar
+import numpy as np                 # Librería de funciones matemáticas
+
+#%% Adquisición de la señal por tiempo definido
+
+fs = 200 # Frecuencia de muestreo en Hz. Recuerda cumplir el criterio de Nyquist (fs >= 2 * max(frecuencia_senal))
+duracion = 10  # Duración en segundos de la captura
+dispositivo = 'Dev6/ai0'  # Nombre del dispositivo/canal. Cambia según tu configuración en NI MAX
+
+# Número total de muestras
+total_muestras = int(fs * duracion)
+
+# Inicializamos la lista que almacenará los datos de la señal
+senal = []
+
+# Crear la tarea de adquisición de datos
+with nidaqmx.Task() as task:
+    # Configuración del canal de entrada (tensión)
+    task.ai_channels.add_ai_voltage_chan(dispositivo)
+    
+    # Configuración del reloj de muestreo
+    task.timing.cfg_samp_clk_timing(
+        fs,  # Frecuencia de muestreo
+        sample_mode=AcquisitionType.FINITE,  # Adquisición finita
+        samps_per_chan=total_muestras  # Número total de muestras a adquirir
+    )
+
+    # Lectura de las muestras
+    senal = task.read(number_of_samples_per_channel=total_muestras)
+
+# Crear el vector de tiempo para la gráfica
+t = np.arange(len(senal)) / fs  # El tiempo se calcula dividiendo el número de muestras por la frecuencia de muestreo
+
+# Graficamos la señal adquirida
+plt.plot(t, senal)
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Amplitud (V)')
+plt.title(f"Señal capturada\nFrecuencia de muestreo: {fs} Hz | Duración: {duracion} s | Muestras: {len(senal)}")
+plt.grid(True)
+plt.show()
+
+# Guardar los datos adquiridos en un archivo de texto
+np.savetxt(f"captura_señal_fs{fs}_duracion{duracion}.txt", np.vstack((t, senal)).T, fmt="%f", header="Tiempo(s)  Señal(V)")
+print(f"Datos guardados en: captura_señal_fs{fs}_duracion{duracion}.txt")
+```
 3. La señal fue graficada en el dominio tiempo vs voltaje 
 
 ```
