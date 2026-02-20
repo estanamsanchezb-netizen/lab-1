@@ -3,7 +3,7 @@
 Analizar estadísticamente una señal fisiológia, calcular sus principales estadísticos, y comparar los resultados entre señales adquiridas mediante DAQ y descargada por PhysioNet, aplicando el concepto señal-ruido.
 ## Procedimiento 
 ### Parte A
-1. Se desacrgo una señal fisiológica de ecg mediante la pagina physioNet (https://physionet.org/content/norwegian-athlete-ecg/1.0.0/). Se uso la señal del Norwegian Endurance Athlete ECG Database.
+1. Se descargo una señal fisiológica de ecg mediante la pagina physioNet (https://physionet.org/content/norwegian-athlete-ecg/1.0.0/). Se uso la señal del Norwegian Endurance Athlete ECG Database.
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
