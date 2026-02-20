@@ -251,6 +251,7 @@ Los resultados estadísticos muestran similitudes clave con el ejemplo guía: co
 
 <img width="207" height="663" alt="image" src="https://github.com/user-attachments/assets/876ce910-9280-4662-a6d5-3f457c425991" />
 
+Imagen 2. Diagrama de flujo parte B
 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
