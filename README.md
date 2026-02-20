@@ -242,8 +242,10 @@ plt.show()
 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
+
 La relación señal-ruido es una medida que indica qué tan fuerte es una señal útil en comparación con el ruido que la afecta.
-1.a. Se contaminó la señal con ruido gaussiano
+
+1. Se contaminó la señal con ruido gaussiano
 
 ```
 import numpy as np
@@ -275,12 +277,13 @@ plt.tight_layout()
 plt.show()
 
 ```
+<img width="832" height="385" alt="image" src="https://github.com/user-attachments/assets/cf4a5bd9-e7c8-4c95-9328-ce8b3f2d075c" />
 
-<img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
+
 <br>
 
 
-1.b. Se contaminó la señal con ruido tipo impulso:
+2. Se contaminó la señal con ruido tipo impulso:
 
 ```
 import numpy as np
@@ -316,8 +319,10 @@ plt.tight_layout()
 plt.show()
 
 ```
+<img width="841" height="375" alt="image" src="https://github.com/user-attachments/assets/3b74d71b-e706-48e2-ba3d-a73c432de7a1" />
 
-1.c. Se contaminó la señal con ruido tipo artefacto:
+
+3. Se contaminó la señal con ruido tipo artefacto:
 
 
 ```
@@ -358,5 +363,6 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-
 ```
+<img width="982" height="384" alt="image" src="https://github.com/user-attachments/assets/eede81e8-de1c-4b64-acd6-fdaa6c49bc5b" />
+
