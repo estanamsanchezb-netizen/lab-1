@@ -247,7 +247,9 @@ plt.show()
 <img width="895" height="375" alt="image" src="https://github.com/user-attachments/assets/25540732-a8dc-4e51-b664-2ee8dc309346" />
 
 
-Los resultados estadísticos muestran similitudes clave con el ejemplo guía: coeficiente de variación (60.62%) y asimetría (4.80) idénticos, confirmando dispersión y distribución similares. Sin embargo, nuestra señal presenta menor amplitud (media -0.198 V vs -1.44 V) y mayor estabilidad (desviación 0.120 V vs 0.629 V), con kurtosis superior (14.57 vs 10.47) que indica picos más pronunciados, típicos de ECG real. Estas diferencias responden a la configuración específica de captura
+Los resultados estadísticos muestran similitudes clave con el ejemplo guía: coeficiente de variación (60.62%) y asimetría (4.80) idénticos, confirmando dispersión y distribución similares. Sin embargo, nuestra señal presenta menor amplitud (media -0.198 V vs -1.44 V) y mayor estabilidad (desviación 0.120 V vs 0.629 V), con curtosis superior (14.57 vs 19.42) que indica picos más pronunciados, típicos de ECG real. Estas diferencias responden a la configuración específica de captura
+
+<img width="207" height="663" alt="image" src="https://github.com/user-attachments/assets/876ce910-9280-4662-a6d5-3f457c425991" />
 
 
 ### Parte C 
