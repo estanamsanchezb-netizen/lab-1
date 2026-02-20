@@ -122,3 +122,120 @@ Imagen 1. Diagrama de flujo parte A
 ### Parte C 
 ¿Qué es la relación señal-ruido?
 La relación señal-ruido es una medida que indica qué tan fuerte es una señal útil en comparación con el ruido que la afecta.
+1.a. Se contaminó la señal con ruido gaussiano
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+ruido = np.random.normal(9, 9, size=v.shape)
+y = v + ruido
+
+# SNR
+Psignal = np.mean(v**2)
+Pnoise  = np.mean((y - v)**2)
+SNR_dB  = 10 * np.log10(Psignal / Pnoise)
+print("SNR (dB):", SNR_dB)
+
+# Plot
+plt.figure(figsize=(10,5))
+plt.plot(t, v, label="Señal original")
+plt.plot(t, y, label="Señal con ruido", alpha=0.7)
+plt.title(f"Señal con y sin ruido (SNR ≈ {SNR_dB:.2f} dB)")
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Amplitud")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+```
+
+<img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
+<br>
+
+
+1.b. Se contaminó la señal con ruido tipo impulso:
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = v
+
+prob = 0.01                 # porcentaje de puntos alterados (5%)
+amplitud = np.max(np.abs(x)) * 0.5   # tamaño del impulso
+
+mask = np.random.rand(len(x)) < prob
+ruido = np.zeros_like(x)
+ruido[mask] = np.random.choice([+amplitud, -amplitud], size=mask.sum())
+y = x + ruido
+
+# SNR
+Psignal = np.mean(x**2)
+Pnoise  = np.mean((y - x)**2)
+SNR_dB  = 10*np.log10(Psignal / Pnoise)
+print(f"SNR (dB): {SNR_dB:.2f}")
+
+# Plot
+plt.figure(figsize=(10,5))
+plt.plot(t, x, label="Señal original")
+plt.plot(t, y, label="Señal con ruido impulso", alpha=0.8)
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Amplitud")
+plt.title(f"Señal con ruido impulso (SNR ≈ {SNR_dB:.1f} dB)")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+```
+
+1.c. Se contaminó la señal con ruido tipo artefacto:
+
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Asumiendo que ya tienes:
+# t = tiempo
+# v = señal
+
+t = t
+x = v
+
+f_bw = 0.3                 # Hz (deriva de línea base)
+A_bw = 0.3*np.std(x)       # amplitud de deriva (ajusta 0.1–0.5)
+
+f_pl = 60.0                # Hz (interferencia de red; en algunos países es 50)
+A_pl = 0.1*np.std(x)       # amplitud de red (ajusta 0.05–0.3)
+
+artefacto = A_bw*np.sin(2*np.pi*f_bw*t) + A_pl*np.sin(2*np.pi*f_pl*t)
+y = x + artefacto
+
+# SNR
+Psignal = np.mean(x**2)
+Pnoise  = np.mean((y - x)**2)
+SNR_dB  = 10*np.log10(Psignal / Pnoise)
+print(f"SNR (dB): {SNR_dB:.2f}")
+
+# Plot
+plt.figure(figsize=(12,5))
+plt.plot(t, x, label="Señal original", linewidth=1.2)
+plt.plot(t, y, label="Con artefacto", alpha=0.8, linewidth=1.0)
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Amplitud")
+plt.title(f"Señal con ruido tipo artefacto (SNR ≈ {SNR_dB:.1f} dB)")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+
+
+```
