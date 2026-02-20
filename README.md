@@ -114,8 +114,9 @@ plt.show()
 Imagen 1. Diagrama de flujo parte A
 
 ### Parte B 
-
-se capturo la señal con daq y luego se grafico:
+1. Se generó una señal ECG utilizando el generador de señales.
+2. Se realizó la captura mediante el uso del sistema DAQ. En Spyder se ejecutó el código de captura y se guardó el archivo en formato TXT.
+3. La señal fue graficada en el dominio tiempo vs voltaje 
 
 ```
 import numpy as np
@@ -138,8 +139,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-luego se le saco
 
+4. Se calculo los estadísticos.
+ 
 ```
 
 media2=np.mean(v)
@@ -163,8 +165,21 @@ print(f"La asimetría es igual a {asimetria2}")
 
 
 ```
+5. Se grafico el histograma
+  ``` 
+import matplotlib.pyplot as plt
 
+datos = v  # tu señal
 
+plt.figure(figsize=(10,5))
+plt.hist(datos, bins=50, edgecolor="black", linewidth=0.6, alpha=0.85)
+plt.title("Histograma de la señal")
+plt.xlabel("Amplitud (V)")
+plt.ylabel("Frecuencia")
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+```
 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
