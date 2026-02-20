@@ -114,6 +114,32 @@ plt.show()
 Imagen 1. Diagrama de flujo parte A
 
 ### Parte B 
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+ruta = "/content/captura_señal_fs2000_duracion5.txt"
+
+datos = np.loadtxt(ruta, comments="#", encoding="latin1")  # <-- clave
+
+t = datos[:, 0]
+v = datos[:, 1]
+
+plt.figure()
+plt.plot(t, v)
+plt.title("Señal vs Tiempo")
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Señal (V)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+
+<img width="599" height="446" alt="image" src="https://github.com/user-attachments/assets/61c66984-6773-462d-8425-c6dc2654befc" />
+<br>
+
+
+
 ### Parte C 
 ¿Qué es la relación señal-ruido?
 La relación señal-ruido es una medida que indica qué tan fuerte es una señal útil en comparación con el ruido que la afecta.
