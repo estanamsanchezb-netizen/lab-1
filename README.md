@@ -115,7 +115,54 @@ Imagen 1. Diagrama de flujo parte A
 
 ### Parte B 
 
+se capturo la señal con daq y luego se grafico:
 
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+ruta = "/content/captura_señal_fs2000_duracion5.txt"
+
+datos = np.loadtxt(ruta, comments="#", encoding="latin1")  # <-- clave
+
+t = datos[:, 0]
+v = datos[:, 1]
+
+plt.figure()
+plt.plot(t, v)
+plt.title("Señal vs Tiempo")
+plt.xlabel("Tiempo (s)")
+plt.ylabel("Señal (V)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+```
+
+luego se le saco
+
+```
+
+media2=np.mean(v)
+mediana2=np.median(v)
+desviacion_poblacion2=np.std(v)
+desviacion_muestra2=np.std(v,ddof=1)
+curtosis2=kurtosis(v)
+coefvar2=(desviacion_poblacion/media)*100
+asimetria2 = skew(v)
+
+
+
+
+print(f"media igual a {media2}")
+print(f"mediana igual a {mediana2}")
+print(f"la desviacion estandar de la poblacion es igual a {desviacion_poblacion2}")
+print(f"la desviacion estandar de la muestra es igual a {desviacion_muestra2}")
+print(f"la curtosis es igual a {curtosis2}")
+print(f"el coeficiente de variacion es igual a {coefvar2} %")
+print(f"La asimetría es igual a {asimetria2}")
+
+
+```
 
 
 
