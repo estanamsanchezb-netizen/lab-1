@@ -380,5 +380,7 @@ plt.show()
 <img width="982" height="384" alt="image" src="https://github.com/user-attachments/assets/eede81e8-de1c-4b64-acd6-fdaa6c49bc5b" />
 
 Ruido Gaussiano: 18.17 dB
+
 Ruido por impulsos:  22.77 dB
+
 Ruido tipo artefacto: 20.98 dB
