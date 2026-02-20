@@ -116,14 +116,14 @@ Imagen 1. Diagrama de flujo parte A
 ### Parte B 
 1. Se generó una señal ECG utilizando el generador de señales.
 2. Se realizó la captura mediante el uso del sistema DAQ. En Spyder se ejecutó el código de captura y se guardó el archivo en formato TXT.
-   ```
-    Librerías necesarias:
+ ```python
+Librerías necesarias:
 import nidaqmx                     # Librería DAQ
 from nidaqmx.constants import AcquisitionType # Para definir que adquiera datos de manera consecutiva
 import matplotlib.pyplot as plt    # Librería para graficar
 import numpy as np                 # Librería de funciones matemáticas
 
-#%% Adquisición de la señal por tiempo definido
+ Adquisición de la señal por tiempo definido
 
 fs = 200 # Frecuencia de muestreo en Hz. Recuerda cumplir el criterio de Nyquist (fs >= 2 * max(frecuencia_senal))
 duracion = 10  # Duración en segundos de la captura
@@ -167,7 +167,7 @@ print(f"Datos guardados en: captura_señal_fs{fs}_duracion{duracion}.txt")
 ```
 3. La señal fue graficada en el dominio tiempo vs voltaje 
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
