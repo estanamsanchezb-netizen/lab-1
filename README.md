@@ -187,6 +187,7 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
+<img width="564" height="362" alt="image" src="https://github.com/user-attachments/assets/10896b3d-44bd-43d4-a08d-d44a2027708d" />
 
 
 4. Se calculo los estadísticos.
@@ -229,6 +230,7 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 ```
+<img width="895" height="375" alt="image" src="https://github.com/user-attachments/assets/25540732-a8dc-4e51-b664-2ee8dc309346" />
 
 ### Parte C 
 ¿Qué es la relación señal-ruido?
