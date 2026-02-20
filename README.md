@@ -1,5 +1,5 @@
 # Lab-1
-## Objetivo de la preactica 
+## Objetivo de la practica 
 Analizar estadísticamente una señal fisiológia, calcular sus principales estadísticos, y comparar los resultados entre señales adquiridas mediante DAQ y descargada por PhysioNet, aplicando el concepto señal-ruido.
 ## Procedimiento 
 ### Parte A
