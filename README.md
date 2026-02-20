@@ -384,3 +384,7 @@ Ruido Gaussiano: 18.17 dB
 Ruido por impulsos:  22.77 dB
 
 Ruido tipo artefacto: 20.98 dB
+
+<img width="156" height="514" alt="image" src="https://github.com/user-attachments/assets/eaa05000-a89c-4cdd-8aaf-2dea56993804" />
+
+Imagen 3. Diagrama de flujo parte 
