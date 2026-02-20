@@ -216,11 +216,17 @@ print(f"La asimetría es igual a {asimetria2}")
 
 ```
 -media igual a -1.4435322556999999
+
 -mediana igual a -1.566505
+
 -la desviacion estandar de la poblacion es igual a 0.62927945266097
+
 -la desviacion estandar de la muestra es igual a 0.6293109189935976
+
 -la curtosis es igual a 19.424675472358853
+
 -el coeficiente de variacion es igual a -60.62009878776379 %
+
 -La asimetría es igual a 4.2062300212460455
 
 5. Se grafico el histograma
